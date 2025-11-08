@@ -32,5 +32,9 @@ This project is a simple "cybersecurity lab automation tool" built in a controll
 
 >python3 reporter.py nmap_scan.xml nikto_output.txt myreport.html
 
+The result can be shown in this picture : 
+
+
+
 3. Open the generated report in browser :
 >firefox myreport.html
