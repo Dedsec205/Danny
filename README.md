@@ -2,7 +2,7 @@
 # Danny
 Project 1 : # 🛡️ Automated Reconnaissance & Reporting Tool (Kali → Metasploitable Lab)
 
-This project is a simple "cybersecurity lab automation tool" built in a controlled virtual environment using Kali Linux and Metasploitable 
+This project is a simple "cybersecurity lab automation tool" that i built in a controlled virtual environment using Kali Linux(attacker) and Metasploitable (victim)
 
 2. It performs reconnaissance on vulnerable systems and automatically generates a clean HTML vulnerability report.
 
