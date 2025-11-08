@@ -1,6 +1,3 @@
-cd ~/scans
-cat > reporter.py <<'EOF'
-#!/usr/bin/env python3
 import xml.etree.ElementTree as ET
 from datetime import datetime
 import html
@@ -86,5 +83,4 @@ if __name__ == '__main__':
     hosts = parse_nmap_xml(nmap_xml)
     nik = parse_nikto_txt(nikto_txt)
     make_html_report(hosts, nik, out)
-EOF
-chmod +x reporter.py
+

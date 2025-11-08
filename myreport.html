@@ -1,0 +1,89 @@
+<html><head><meta charset='utf-8'><title>Scan Report</title></head><body>
+<h1>Automated Scan Report</h1><p>Generated: 2025-11-08 16:01 UTC</p>
+<h2>Host: 192.168.56.101</h2>
+<table border='1' cellpadding='6'><tr><th>Port</th><th>Proto</th><th>State</th><th>Service</th><th>Severity</th></tr>
+<tr><td>21</td><td>tcp</td><td>open</td><td>ftp vsftpd</td><td>High</td></tr>
+<tr><td>22</td><td>tcp</td><td>open</td><td>ssh OpenSSH</td><td>High</td></tr>
+<tr><td>23</td><td>tcp</td><td>open</td><td>telnet Linux telnetd</td><td>High</td></tr>
+<tr><td>25</td><td>tcp</td><td>open</td><td>smtp Postfix smtpd</td><td>High</td></tr>
+<tr><td>53</td><td>tcp</td><td>open</td><td>domain ISC BIND</td><td>High</td></tr>
+<tr><td>80</td><td>tcp</td><td>open</td><td>http Apache httpd</td><td>High</td></tr>
+<tr><td>111</td><td>tcp</td><td>open</td><td>rpcbind </td><td>High</td></tr>
+<tr><td>139</td><td>tcp</td><td>open</td><td>netbios-ssn Samba smbd</td><td>High</td></tr>
+<tr><td>445</td><td>tcp</td><td>open</td><td>netbios-ssn Samba smbd</td><td>High</td></tr>
+<tr><td>512</td><td>tcp</td><td>open</td><td>exec netkit-rsh rexecd</td><td>High</td></tr>
+<tr><td>513</td><td>tcp</td><td>open</td><td>login OpenBSD or Solaris rlogind</td><td>High</td></tr>
+<tr><td>514</td><td>tcp</td><td>open</td><td>shell Netkit rshd</td><td>High</td></tr>
+<tr><td>1099</td><td>tcp</td><td>open</td><td>java-rmi GNU Classpath grmiregistry</td><td>High</td></tr>
+<tr><td>1524</td><td>tcp</td><td>open</td><td>bindshell Metasploitable root shell</td><td>High</td></tr>
+<tr><td>2049</td><td>tcp</td><td>open</td><td>nfs </td><td>High</td></tr>
+<tr><td>2121</td><td>tcp</td><td>open</td><td>ftp ProFTPD</td><td>High</td></tr>
+<tr><td>3306</td><td>tcp</td><td>open</td><td>mysql MySQL</td><td>High</td></tr>
+<tr><td>5432</td><td>tcp</td><td>open</td><td>postgresql PostgreSQL DB</td><td>High</td></tr>
+<tr><td>5900</td><td>tcp</td><td>open</td><td>vnc VNC</td><td>High</td></tr>
+<tr><td>6000</td><td>tcp</td><td>open</td><td>X11 </td><td>High</td></tr>
+<tr><td>6667</td><td>tcp</td><td>open</td><td>irc UnrealIRCd</td><td>High</td></tr>
+<tr><td>8009</td><td>tcp</td><td>open</td><td>ajp13 Apache Jserv</td><td>High</td></tr>
+<tr><td>8180</td><td>tcp</td><td>open</td><td>http Apache Tomcat/Coyote JSP engine</td><td>High</td></tr>
+</table>
+<h3>Nikto Findings</h3><ul>
+<li>- Nikto v2.5.0/</li>
+<li>+ Target Host: 192.168.56.101</li>
+<li>+ Target Port: 80</li>
+<li>+ GET /: Retrieved x-powered-by header: PHP/5.2.4-2ubuntu5.10.</li>
+<li>+ GET /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options:</li>
+<li>+ GET /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/:</li>
+<li>+ GET /index: Uncommon header &#x27;tcn&#x27; found, with contents: list.</li>
+<li>+ GET /index: Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. The following alternatives for &#x27;index&#x27; were found: index.php. See: http://www.wisec.it/sectou.php?id=4698ebdc59d15,https://exchange.xforce.ibmcloud.com/vulnerabilities/8275:</li>
+<li>+ HEAD Apache/2.2.8 appears to be outdated (current is at least Apache/2.4.54). Apache 2.2.34 is the EOL for the 2.x branch.</li>
+<li>+ CVYRICWW /: Web Server returns a valid response with junk HTTP methods which may cause false positives.</li>
+<li>+ TRACE /: HTTP TRACE method is active which suggests the host is vulnerable to XST. See: https://owasp.org/www-community/attacks/Cross_Site_Tracing:</li>
+<li>+ GET /phpinfo.php: Output from the phpinfo() function was found.</li>
+<li>+ GET /doc/: Directory indexing found.</li>
+<li>+ GET /doc/: The /doc/ directory is browsable. This may be /usr/doc. See: CVE-1999-0678:</li>
+<li>+ GET /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings. See: OSVDB-12184:</li>
+<li>+ GET /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings. See: OSVDB-12184:</li>
+<li>+ GET /?=PHPE9568F34-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings. See: OSVDB-12184:</li>
+<li>+ GET /?=PHPE9568F35-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings. See: OSVDB-12184:</li>
+<li>+ GET /phpMyAdmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.</li>
+<li>+ GET /phpMyAdmin/ChangeLog: Server may leak inodes via ETags, header found with file /phpMyAdmin/ChangeLog, inode: 92462, size: 40540, mtime: Tue Dec  9 12:24:00 2008. See: CVE-2003-1418:</li>
+<li>+ GET /phpMyAdmin/ChangeLog: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.</li>
+<li>+ GET /test/: Directory indexing found.</li>
+<li>+ GET /test/: This might be interesting.</li>
+<li>+ GET /phpinfo.php: PHP is installed, and a test script which runs phpinfo() was found. This gives a lot of system information. See: CWE-552:</li>
+<li>+ GET /icons/: Directory indexing found.</li>
+<li>+ GET /icons/README: Apache default file found. See: https://www.vntweb.co.uk/apache-restricting-access-to-iconsreadme/:</li>
+<li>+ GET /phpMyAdmin/: phpMyAdmin directory found.</li>
+<li>+ GET /phpMyAdmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.</li>
+<li>+ GET /phpMyAdmin/README: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts. See: https://typo3.org/:</li>
+<li>+ GET /#wp-config.php#: #wp-config.php# file found. This file contains the credentials.</li>
+<li>- Nikto v2.5.0/</li>
+<li>+ Target Host: 192.168.56.101</li>
+<li>+ Target Port: 80</li>
+<li>+ GET /: Retrieved x-powered-by header: PHP/5.2.4-2ubuntu5.10.</li>
+<li>+ GET /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options:</li>
+<li>+ GET /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/:</li>
+<li>+ GET /index: Uncommon header &#x27;tcn&#x27; found, with contents: list.</li>
+<li>+ GET /index: Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. The following alternatives for &#x27;index&#x27; were found: index.php. See: http://www.wisec.it/sectou.php?id=4698ebdc59d15,https://exchange.xforce.ibmcloud.com/vulnerabilities/8275:</li>
+<li>+ HEAD Apache/2.2.8 appears to be outdated (current is at least Apache/2.4.54). Apache 2.2.34 is the EOL for the 2.x branch.</li>
+<li>+ NGSIUUHE /: Web Server returns a valid response with junk HTTP methods which may cause false positives.</li>
+<li>+ TRACE /: HTTP TRACE method is active which suggests the host is vulnerable to XST. See: https://owasp.org/www-community/attacks/Cross_Site_Tracing:</li>
+<li>+ GET /phpinfo.php: Output from the phpinfo() function was found.</li>
+<li>+ GET /doc/: Directory indexing found.</li>
+<li>+ GET /doc/: The /doc/ directory is browsable. This may be /usr/doc. See: CVE-1999-0678:</li>
+<li>+ GET /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings. See: OSVDB-12184:</li>
+<li>+ GET /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings. See: OSVDB-12184:</li>
+<li>+ GET /?=PHPE9568F34-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings. See: OSVDB-12184:</li>
+<li>+ GET /?=PHPE9568F35-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings. See: OSVDB-12184:</li>
+<li>+ GET /phpMyAdmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.</li>
+<li>+ GET /phpMyAdmin/ChangeLog: Server may leak inodes via ETags, header found with file /phpMyAdmin/ChangeLog, inode: 92462, size: 40540, mtime: Tue Dec  9 12:24:00 2008. See: CVE-2003-1418:</li>
+<li>+ GET /phpMyAdmin/ChangeLog: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.</li>
+<li>+ GET /test/: Directory indexing found.</li>
+<li>+ GET /test/: This might be interesting.</li>
+<li>+ GET /phpinfo.php: PHP is installed, and a test script which runs phpinfo() was found. This gives a lot of system information. See: CWE-552:</li>
+<li>+ GET /icons/: Directory indexing found.</li>
+<li>+ GET /icons/README: Apache default file found. See: https://www.vntweb.co.uk/apache-restricting-access-to-iconsreadme/:</li>
+<li>+ GET /phpMyAdmin/: phpMyAdmin directory found.</li>
+<li>+ GET /phpMyAdmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.</li>
+</ul>
+<p>End of report.</p></body></html>
