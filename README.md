@@ -1,3 +1,4 @@
+
 # Danny
 Project 1 : # 🛡️ Automated Reconnaissance & Reporting Tool (Kali → Metasploitable Lab)
 
@@ -32,10 +33,11 @@ This project is a simple "cybersecurity lab automation tool" built in a controll
 
 >python3 reporter.py nmap_scan.xml nikto_output.txt myreport.html
 
-The result can be shown in this picture :
-![Report screenshot](https://github.com/Dedsec205/Danny/blob/main/Screenshot%202025-11-08%20at%2011-52-13%20Scan%20Report.png)
-
-
 
 3. Open the generated report in browser :
 >firefox myreport.html
+
+
+The result can be shown in this picture :
+![Report screenshot](https://github.com/Dedsec205/Danny/blob/main/Screenshot%202025-11-08%20at%2011-52-13%20Scan%20Report.png)
+
